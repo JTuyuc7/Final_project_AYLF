@@ -41,9 +41,9 @@ public class UI {
         frame.getContentPane().add(buttonPanel, BorderLayout.SOUTH);
 
         openButton = new JButton("Seleccionar archivo");
-        saveButton = new JButton("Guardar como...");
+//        saveButton = new JButton("Guardar como...");
         buttonPanel.add(openButton);
-        buttonPanel.add(saveButton);
+//        buttonPanel.add(saveButton);
 
         // Acción del botón "Seleccionar archivo"
         openButton.addActionListener(new ActionListener() {
@@ -54,12 +54,12 @@ public class UI {
         });
 
         // Acción del botón "Guardar como..."
-        saveButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                saveHighlightedText();
-            }
-        });
+//        saveButton.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                saveHighlightedText();
+//            }
+//        });
 
         frame.setVisible(true);
     }
