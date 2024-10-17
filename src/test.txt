@@ -1,0 +1,41 @@
+// Este es un comentario de una línea
+
+/*
+   Este es un comentario
+   de múltiples líneas
+*/
+
+public class HolaMundo {
+    public static void main(String[] args) {
+        // Imprimir un mensaje en la consola
+        System.out.println("¡Hola, mundo!");
+
+        int numero = 42;
+        double decimal = 3.14;
+
+        if (numero > 0) {
+            System.out.println("El número es positivo.");
+        } else if (numero == 0) {
+            System.out.println("El número es cero.");
+        } else {
+            System.out.println("El número es negativo.");
+        }
+
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Iteración: " + i);
+        }
+
+        // Uso de símbolos y operadores
+        numero += 10;
+        boolean resultado = (numero > 50) && (decimal < 4.0);
+
+        switch (numero) {
+            case 52:
+                System.out.println("Número es 52.");
+                break;
+            default:
+                System.out.println("Número desconocido.");
+                break;
+        }
+    }
+}
