@@ -82,6 +82,8 @@ public class UI {
         //* Identificadores
         identifierStyle = styleContext.addStyle("IdentifierStyle", null);
         StyleConstants.setForeground(identifierStyle, Color.BLACK);
+        // *Agregar background if needed
+//        StyleConstants.setBackground(identifierStyle, Color.PINK);
 
         // Cualquier otra palabra
         otherStyle = styleContext.addStyle("OtherStyle", null);
@@ -102,32 +104,32 @@ public class UI {
         try {
             // Crear el analizador léxico
             Reader reader = new BufferedReader(new FileReader(file));
-            LenguageFlexer lexer = new LenguageFlexer(reader);
+            LanguageFlexer lexer = new LanguageFlexer(reader);
 
             // Procesar todo el archivo
-            while (lexer.yylex() != LenguageFlexer.YYEOF) {
+            while (lexer.yylex() != LanguageFlexer.YYEOF) {
                 // El analizador ya está llenando la lista de tokens
             }
 
             // Obtener la lista de tokens
-            List<LenguageFlexer.Token> tokens = lexer.getTokens();
+            List<LanguageFlexer.Token> tokens = lexer.getTokens();
 
             // Insertar los tokens en el documento con el estilo apropiado
-            for (LenguageFlexer.Token token : tokens) {
+            for (LanguageFlexer.Token token : tokens) {
                 String lexeme = token.lexeme;
                 Style style;
 
                 switch (token.type) {
-                    case LenguageFlexer.RESERV_WORD:
+                    case LanguageFlexer.RESERV_WORD:
                         style = keywordStyle;
                         break;
-                    case LenguageFlexer.IDENTIFIER:
+                    case LanguageFlexer.IDENTIFIER:
                         style = identifierStyle;
                         break;
-                    case LenguageFlexer.NUMBER:
+                    case LanguageFlexer.NUMBER:
                         style = numberStyle;
                         break;
-                    case LenguageFlexer.SYMBOL:
+                    case LanguageFlexer.SYMBOL:
                         style = symbolStyle;
                         break;
                     default:

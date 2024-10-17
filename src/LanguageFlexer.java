@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings("fallthrough")
-public class LenguageFlexer {
+public class LanguageFlexer {
 
   /** This character denotes the end of file. */
   public static final int YYEOF = -1;
@@ -477,7 +477,7 @@ public class LenguageFlexer {
    *
    * @param   in  the java.io.Reader to read input from.
    */
-  public LenguageFlexer(java.io.Reader in) {
+  public LanguageFlexer(java.io.Reader in) {
     this.zzReader = in;
   }
 

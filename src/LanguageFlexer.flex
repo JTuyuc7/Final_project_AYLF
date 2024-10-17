@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 %%
 %public
-%class LenguageFlexer
+%class LanguageFlexer
 %unicode
 %integer
 %{
@@ -36,6 +36,7 @@ import java.util.List;
 
 // Definiciones de patrones
 RESERV_WORDS = "abstract"
+               |"List"
                |"assert"
                |"boolean"
                |"break"
